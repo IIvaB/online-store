@@ -1,0 +1,1 @@
+showProductsBtn.addEventListener("click", callback);
