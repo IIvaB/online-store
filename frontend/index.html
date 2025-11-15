@@ -4,12 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Магазин онлайн</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <script src="app.js" defer></script>
+  
   <body>
+    <header>
     <h1>Магазин онлайн 🛒</h1>
-    <p>Вітаю у своєму першому пет-проєкті!</p>
-    <button id="showProductsBtn">Показати товари</button>
+    <nav>
+      <a href="#home">Головна</a>
+      <a href="#products">Товари</a>
+      <a href="#contact">Контакти</a>
+    </nav>
+  </header>
+
+    <section id="home">
+      <h2>Ласкаво просимо до нашого магазину!</h2>
+      <p>Вітаю у своєму першому пет-проєкті!</p>
+      <button id="showProductsBtn">Показати товари</button>
+      <script src="./js/app.js" defer></script>
+    </section>
+
+    <section id="catalog">
+        <h2>Каталог товарів</h2>
+      <div id="productList">
+
+      <article class="product-card">
+        <img src="./images/product1.jpg" alt="Soho Sell Green"/>
+        <h3>Плед Soho Sell Green, 150х200 см, 7119141</h3>
+        <p class="price">543.15 грн/шт</p>
+        <button class="buy-btn">Купити</button>
+      </article>
+
+      <article class="product-card">
+        <img src="./images/product2.jpg" alt="Soho Sell Red"/>
+        <h3>Плед Soho Sell Red, 200х220 см, 7119140</h3>
+        <p class="price">713.15 грн/шт</p>
+        <button class="buy-btn">Купити</button>
+      </article>
+
+      <article class="product-card">
+        <img src="./images/product3.jpg" alt="Soho Sweet Beige"/>
+        <h3>Плед Soho Sweet Beige, 150х200 см, 7119148</h3>
+        <p class="price">543.15 грн/шт</p>
+        <button class="buy-btn">Купити</button>
+      </article>
+
+      </div>
+    </section>
   </body>
 </html>

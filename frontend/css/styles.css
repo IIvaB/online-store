@@ -1,10 +1,116 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  color: #333;
-  text-align: center;
-  padding: 40px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Щоб padding не виходив за межі */
 }
+
+/* HEADER - верхня панель */
+header {
+    background-color: #0077ff;  /* Синій фон */
+    color: white;               /* Білий текст */
+    padding: 20px;              /* Відступ всередині */
+    display: flex;              /* Елементи в рядок */
+    justify-content: space-between;  /* Логотип ліворуч, меню праворуч */
+    align-items: center;        /* Вирівняти по вертикалі */
+}
+
 h1 {
-  color: #0077ff;
+    color: #ffffff;             /* Білий колір */
+    margin: 0;                  /* Немає відступів за межами */
+    font-size: 28px;            /* Великий розмір */
+}
+
+/* BODY - основна частина */
+body {
+    font-family: Arial, sans-serif;  /* Шрифт */
+    background: #f2f2f2;             /* Світлий сірий фон */
+    color: #333;                     /* Темний колір тексту */
+}
+
+/* КНОПКА "Показати товари" */
+#showProductsBtn {
+    background-color: #0077ff;  /* Синій фон */
+    color: white;               /* Білий текст */
+    border: none;               /* Немає bordery */
+    padding: 15px 30px;         /* Внутрішні відступи */
+    cursor: pointer;            /* Указівник при наведенні */
+    font-size: 16px;            /* Розмір шрифту */
+    margin: 20px 0;             /* Відступи зверху/знизу */
+    border-radius: 5px;         /* Заокруглені кути */
+    transition: background-color 0.3s ease;  /* Плавна зміна кольору */
+}
+
+/* КНОПКА при наведенні миші */
+#showProductsBtn:hover {
+    background-color: #005fcc;  /* Темніший синій */
+}
+
+/* КОНТЕЙНЕР З КАРТОЧКАМИ */
+#productList {
+    display: grid;  /* Сітка */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* 3-4 карточки в ряд */
+    gap: 20px;      /* Відступ між карточками */
+    margin: 30px 0; /* Відступ зверху/знизу */
+    max-width: 1200px;  /* Максимальна ширина */
+    margin-left: auto;  /* Центрування */
+    margin-right: auto;
+}
+
+/* КАРТОЧКА ТОВАРУ */
+.product-card {
+    background: white;          /* Білий фон */
+    border-radius: 8px;         /* Заокруглені кути */
+    padding: 15px;              /* Внутрішні відступи */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  /* Тінь */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Плавні анімації */
+    text-align: left;           /* Текст ліворуч */
+}
+
+/* КАРТОЧКА при наведенні - піднімається вгору */
+.product-card:hover {
+    transform: translateY(-5px);  /* Піднімає на 5px */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Більша тінь */
+}
+
+/* КАРТИНКА в карточці */
+.product-card img {
+    width: 100%;        /* На весь простір */
+    height: 200px;      /* Фіксована висота */  
+    object-fit: cover;  /* Заповнює простір, обрізає краї */
+    border-radius: 6px; /* Трошки заокруглені кути */
+    margin-bottom: 12px;  /* Відступ знизу */
+}
+
+/* НАЗВА ТОВАРУ */
+.product-card h3 {
+    font-size: 16px;    /* Розмір */
+    margin-bottom: 10px;  /* Відступ знизу */
+    color: #333;        /* Темний колір */
+}
+
+/* ЦІНА */
+.product-card .price {
+    font-size: 18px;    /* Більший розмір */
+    font-weight: bold;  /* Товстий шрифт */
+    color: #0077ff;     /* Синій колір */
+    margin-bottom: 15px;  /* Відступ знизу */
+}
+
+/* КНОПКА "Купити" */
+.buy-btn {
+    width: 100%;        /* На весь простір карточки */
+    background-color: #0077ff;  /* Синій */
+    color: white;       /* Білий текст */
+    border: none;       /* Без bordery */
+    padding: 12px;      /* Внутрішні відступи */
+    border-radius: 5px; /* Заокруглені кути */
+    cursor: pointer;    /* Указівник */
+    font-size: 14px;    /* Розмір */
+    font-weight: bold;  /* Жирний */
+    transition: background-color 0.3s ease;  /* Плавна зміна кольору */
+}
+
+/* КНОПКА при наведенні */
+.buy-btn:hover {
+    background-color: #005fcc;  /* Темніший синій */
 }
